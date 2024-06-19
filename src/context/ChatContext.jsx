@@ -26,7 +26,7 @@ export const ChatContextProvider = ({children, user}) => {
     
     // initializing socket
     useEffect(()=>{
-        const newSocket = io("http://localhost:3000");
+        const newSocket = io("https://socket-chat-app-bpap.onrender.com");
         setSocket(newSocket);
         return ()=>{
             newSocket.disconnect();
